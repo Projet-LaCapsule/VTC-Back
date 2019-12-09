@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const UserSchema = mongoose.Schema({
   first_name: String,
   last_name: String,
-  email: String, 
+  email: String,
+  salt: String,
   tel: Number, 
   password: String, 
+  token: String,
   role: String, 
   homeaddress: String, 
   officeaddress: String, 
