@@ -16,6 +16,7 @@ router.post('/addTrip', async function(req, res) {
     hourdeparture: req.body.hourdeparture,
     price: req.body.price,
     distance: req.body.distance,
+    hourDeparture: req.body.hourDeparture,
     time: req.body.time
   })
 
