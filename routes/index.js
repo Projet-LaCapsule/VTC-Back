@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+var UserModel = require('../models/user');
+var TripModel = require('../models/trip');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
