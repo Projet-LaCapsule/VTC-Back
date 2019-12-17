@@ -23,7 +23,9 @@ router.post('/signup', async function(req, res) {
       tel: req.body.tel, 
       password: SHA256(req.body.password + salt).toString(encBase64) , 
       token: uid2(32),
-      role: 'User', 
+      role: 'User',
+      homeaddress: req.body.homeaddress,
+      officeaddress: req.body.officeaddress
     });
 
     await newUser.save(function(err, user) {

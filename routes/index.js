@@ -37,4 +37,24 @@ router.get('/confirmTravel', async function(req, res) {
     })
 })
 
+router.get('/addHomeAddress', async function(req, res) {
+    var findUser = await UserModel.updateOne({_id: req.query.userid}, {homeaddress: req.query.homeaddress}, function(err, raw) {
+      console.log('raw ->',raw);
+      console.log('err',err)
+      if(!err) {
+        res.json({response: true })
+      }
+    })
+})
+
+router.get('/addOfficeAddress', async function(req, res) {
+  var findUser = await UserModel.updateOne({_id: req.query.userid}, {officeaddress: req.query.officeaddress}, function(err, raw) {
+    console.log('raw ->',raw);
+    console.log('err',err)
+    if(!err) {
+      res.json({response: true})
+    }
+  })
+})
+
 module.exports = router;
