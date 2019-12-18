@@ -59,7 +59,7 @@ router.get('/addOfficeAddress', async function(req, res) {
 
 
 router.get('/userTrip', async function(req, res) {
-  var getUser = await await UserModel.findOne({_id: req.query.id}).populate('trips').exec(function(err, userTrip) {
+  var getUser = await UserModel.findOne({_id: req.query.id}).populate('trips').exec(function(err, userTrip) {
     console.log(userTrip);
     res.json({userTrip});
   })
