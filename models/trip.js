@@ -8,7 +8,7 @@ const TripSchema = mongoose.Schema({
   hourdeparture: String, 
   hourarrival: String, 
   price: String, 
-  distance: Number, 
+  distance: String, 
   time:String,
   
 });
